@@ -29,6 +29,7 @@
 ### 2. Установка зависимостей
 ```bash
 pip install aiohttp beautifulsoup4
+```
 
 # Telegram Translator Bot
 
