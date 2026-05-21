@@ -29,3 +29,48 @@
 ### 2. Установка зависимостей
 ```bash
 pip install aiohttp beautifulsoup4
+
+# Telegram Translator Bot
+
+Асинхронный Telegram-бот, который переводит текст на заданный язык с помощью публичного API [LibreTranslate](https://libretranslate.com/).
+
+## Особенности
+- Написан на Python с использованием фреймворка `aiogram` 3.x.
+- Асинхронные неблокирующие HTTP-запросы через `aiohttp`.
+- Логика взаимодействия с внешним API изолирована в отдельном модуле.
+- Корректная обработка сетевых ошибок и таймаутов.
+- Защита чувствительных данных (токены хранятся в `.env`).
+
+## Требования
+- Python 3.9 или выше.
+- Токен Telegram-бота (получить можно у [@BotFather](https://t.me/BotFather)).
+
+## Установка и запуск
+
+1. Клонируйте репозиторий:
+   git clone https://github.com/ВАШ_ЛОГИН/translator-bot.git
+   cd translator-bot
+
+2. Создайте и активируйте виртуальное окружение:
+   python -m venv venv
+   source venv/bin/activate  # Для Linux/macOS
+   venv\Scripts\activate     # Для Windows
+
+3. Установите зависимости:
+   pip install -r requirements.txt
+
+4. Создайте конфигурационный файл:
+   Создайте файл `.env` в корневой директории и добавьте ваш токен:
+   BOT_TOKEN=ваш_токен_бота
+
+5. Запустите бота:
+   python bot.py
+
+## Использование
+Отправьте боту команду в формате: `/translate <код_языка> <текст>`
+
+Пример: 
+- `/translate ru Hello, how are you?`
+- `/translate en Привет, мир!`
+
+
